@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <script>
+        const PERSONAL_DATA = {
+            profilePic: "https://images.unsplash.com/photo-1494790108377-be9c29b29329?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Example: A sleek, professional portrait
+            
+            mainTitle: "AD",
+            subTitle: "Digital Artist & AI Engineer",
+            aboutHero: "Hey! I'm AD, an Independent Digital Artist & AI Engineer.",
+            
+            aboutMeTitle: "About AD",
+            aboutMeContent: "As a digital artisan based in Cairo, my passion lies in bridging the realms of visual design and advanced programming. My days are spent exploring the depths of AI models, sculpting immersive experiences in 3D, and bringing static concepts to life with motion graphics. A deep fascination with efficient code and elegant interfaces drives my contributions to various technologies. This space is a glimpse into the ongoing evolution of my creative and technical pursuits.",
+            
+            projects: [
+                {
+                    id: "project-1",
+                    img: "https://images.unsplash.com/photo-1549497507-e85d95393081?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    title: "Procedural Cityscapes",
+                    category: "3D Design",
+                    tags: ["3D", "Blender", "Generative"]
+                },
+                {
+                    id: "project-2",
+                    img: "https://images.unsplash.com/photo-1502941369288-75f21226068d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    title: "Dynamic Motion Reel",
+                    category: "Motion Graphics",
+                    tags: ["AE", "VFX", "Branding"]
+                },
+                {
+                    id: "project-3",
+                    img: "https://images.unsplash.com/photo-1550993952-4740e70335e9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    title: "Conceptual Digital Art",
+                    category: "Digital Art",
+                    tags: ["Photoshop", "Concept", "Illustration"]
+                },
+                 {
+                    id: "project-4",
+                    img: "https://images.unsplash.com/photo-1518709594002-d961a5293290?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    title: "AI-Powered Generation Tool",
+                    category: "AI & Dev",
+                    tags: ["Python", "AI", "Tool Dev"]
+                },
+                {
+                    id: "project-5",
+                    img: "https://images.unsplash.com/photo-1547481745-f0cc78c94a97?q=80&w=1969&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                    title: "Brand Identity Design",
+                    category: "Digital Art",
+                    tags: ["Branding", "UI/UX", "Logos"]
+                }
+            ],
+
+            signatureWorks: [
+                 {
+                    id: "sig-work-1",
+                    img: "http://googleusercontent.com/file_content/21", // Your VD Logo
+                    title: "VD: Visual Dynamism Core",
+                    description: "My signature design philosophy and brand identity.",
+                    link: "#"
+                },
+                {
+                    id: "sig-work-2",
+                    img: "https://images.unsplash.com/photo-1519389950473-47ba0c766d19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Lua related
+                    title: "Lua Language Contributions",
+                    description: "Driving the evolution of lightweight, powerful scripting.",
+                    link: "#"
+                },
+                 {
+                    id: "sig-work-3",
+                    img: "https://images.unsplash.com/photo-1581092892956-f6d3f2c5d1b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // AI related
+                    title: "Replika AI Development",
+                    description: "Shaping intelligent conversations for personal AI companions.",
+                    link: "#"
+                }
+            ],
+            
+            skills: [
+                { name: "3D Design (Blender)", iconClass: "devicon-blender-original" },
+                { name: "Motion Graphics (AE)", iconClass: "devicon-aftereffects-plain" },
+                { name: "Digital Painting (PS)", iconClass: "devicon-photoshop-plain" },
+                { name: "AI Development", iconClass: "fas fa-robot" },
+                { name: "Rust Programming", iconClass: "devicon-rust-plain" },
+                { name: "C++ Development", iconClass: "devicon-cplusplus-plain" },
+                { name: "Lua Scripting", iconClass: "devicon-lua-plain" },
+                { name: "C# Development", iconClass: "devicon-csharp-plain" },
+                { name: "Python Engineering", iconClass: "devicon-python-plain" },
+                { name: "Web Development", iconClass: "devicon-html5-plain" }
+            ],
+
+            insights: [
+                { id: "insight-1", img: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  title: "The Fusion of Art & AI in Modern Design", description: "Exploring how artificial intelligence reshapes creative workflows and possibilities." },
+                { id: "insight-2", img: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB2MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+                  title: "Optimizing 3D Renders: A Blender Workflow", description: "Tips and tricks for achieving photorealistic results in 3D rendering with Blender." }
+            ],
+
+            socialLinks: {
+                github: "https://github.com/AboElsid",
+                linkedin: "#",
+                twitter: "#",
+                discord: "https://discord.gg/chSehGJDhN",
+                email: "sayedahmedegypt1993@gmail.com"
+            }
+        };
+    </script>
+</head>
+<body>
+    <div class="site-wrapper">
+        <canvas id="liquid-canvas"></canvas>
+
+        <header class="main-header">
+            <div class="logo">Sayed.</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#hero-section">Home</a></li>
+                    <li><a href="#about-me-section">About</a></li>
+                    <li><a href="#portfolio-section">Portfolio</a></li>
+                    <li><a href="#featured-works-section">Signature Works</a></li>
+                    <li><a href="#insights-section">Insights</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-socials">
+                <a href="#" id="header-github" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" id="header-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </header>
+
+        <section id="hero-section" class="hero-section screen-section">
+            <div class="hero-content">
+                <p class="hero-intro" id="hero-intro-text"></p>
+                <h1 class="hero-title" id="hero-main-title"></h1>
+                <h2 class="hero-subtitle" id="hero-sub-title"></h2>
+                <div class="hero-ctas">
+                    <button class="cta-button primary-cta"><i class="fas fa-download"></i> Download CV</button>
+                    <button class="cta-button secondary-cta"><i class="fas fa-handshake"></i> Let's Talk</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img id="hero-profile-pic" src="" alt="Sayed's Profile">
+            </div>
+        </section>
+
+        <section id="about-me-section" class="about-me-section screen-section">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <p>A Glimpse into My Digital Realm</p>
+            </div>
+            <div class="about-me-grid">
+                <div class="about-me-image">
+                    <img id="about-me-profile-pic" src="" alt="Sayed's Profile">
+                </div>
+                <div class="about-me-text-content">
+                    <h3>Hello! I'm Sayed, a Digital Creator & AI Engineer.</h3>
+                    <p id="about-me-full-text"></p>
+                    <ul class="about-info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> Based in: Cairo, Egypt</li>
+                        <li><i class="fas fa-envelope"></i> Email: <span id="about-email"></span></li>
+                        <li><i class="fas fa-phone"></i> Phone: +20 100 123 4567</li>
+                    </ul>
+                    <div class="about-me-quick-access-grid">
+                        <div class="quick-access-item">
+                            <i class="fas fa-laptop-code"></i>
+                            <h4>AI Development</h4>
+                            <p>Intelligent systems.</p>
+                        </div>
+                        <div class="quick-access-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <h4>Digital Artistry</h4>
+                            <p>Visual magic.</p>
+                        </div>
+                        <div class="quick-access-item">
+                            <i class="fas fa-cube"></i>
+                            <h4>3D Modeling</h4>
+                            <p>Immersive spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills-section" class="skills-section screen-section">
+            <div class="section-header">
+                <h2>My Skills</h2>
+                <p>Crafting Digital Experiences</p>
+            </div>
+            <div id="skills-grid" class="skills-grid">
+            </div>
+        </section>
+
+        <section id="portfolio-section" class="portfolio-section screen-section">
+            <div class="section-header">
+                <h2>My Portfolio</h2>
+                <p>A Showcase of Creative Works</p>
+            </div>
+            <div id="projects-grid" class="projects-grid">
+            </div>
+        </section>
+
+        <section id="featured-works-section" class="featured-works-section screen-section">
+            <div class="section-header">
+                <h2>Signature Creations</h2>
+                <p>Defining My Journey in Tech & Art</p>
+            </div>
+            <div id="featured-works-grid" class="signature-works-grid">
+            </div>
+        </section>
+
+        <section id="insights-section" class="insights-section screen-section">
+            <div class="section-header">
+                <h2>Latest Insights</h2>
+                <p>Thoughts and Explorations</p>
+            </div>
+            <div id="insights-grid" class="insights-grid">
+            </div>
+        </section>
+
+        <section id="contact-section" class="contact-section screen-section">
+            <div class="section-header">
+                <h2>Let's Collaborate</h2>
+                <p>Reach Out for Your Next Project</p>
+            </div>
+            <div class="contact-content-grid">
+                <div class="contact-info-block">
+                    <h3>Get in Touch</h3>
+                    <p>I am passionate about innovative projects at the intersection of technology and art. If you have an idea, a challenge, or just want to connect, feel free to reach out!</p>
+                    <div class="contact-details">
+                        <p><i class="fas fa-envelope"></i> Email: <span id="contact-email"></span></p>
+                        <p><i class="fab fa-github"></i> GitHub: <span id="contact-github"></span></p>
+                        <p><i class="fab fa-linkedin"></i> LinkedIn: <span id="contact-linkedin"></span></p>
+                        <p><i class="fab fa-discord"></i> Discord: <span id="contact-discord"></span></p>
+                    </div>
+                </div>
+                <div class="contact-form-block">
+                    <h3>Send a Message</h3>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit" class="cta-button primary-cta send-message-button"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer class="main-footer">
+            <div class="footer-logo">Sayed.</div>
+            <div class="footer-socials">
+                <a href="#" id="footer-github" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" id="footer-linkedin" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" id="footer-twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" id="footer-discord" target="_blank"><i class="fab fa-discord"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Sayed. All rights reserved. Crafted with passion by Mera AI.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
