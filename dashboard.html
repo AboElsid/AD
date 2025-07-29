@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم AD - أبو السيد</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body class="dashboard-body">
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand">AD</a> <ul class="navbar-nav">
+                <li><a href="/" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> الإحصائيات</a></li>
+                <li><a href="#"><i class="fas fa-project-diagram"></i> المشاريع</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> الإعدادات</a></li>
+                <li><a href="/" class="logout-btn"><i class="fas fa-sign-out-alt"></i> تسجيل خروج</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://qudsn.co/thumb/w1110/uploads/2016/01/face.jpg" alt="صورة المستخدم" class="user-avatar"> <h2>أبو السيد</h2>
+                <p>مصمم جرافيك - AD</p>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> لوحة التحكم</a></li>
+                <li><a href="#"><i class="fas fa-folder-open"></i> مشاريعي</a></li>
+                <li><a href="#"><i class="fas fa-file-invoice-dollar"></i> الفواتير</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> الرسائل <span class="badge">3</span></a></li>
+                <li><a href="#"><i class="fas fa-users-cog"></i> فريق العمل</a></li>
+                <li><a href="#"><i class="fas fa-calendar-alt"></i> التقويم</a></li>
+                <li><a href="#"><i class="fas fa-question-circle"></i> المساعدة</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-dashboard-content">
+            <h1 class="dashboard-title">أهلاً بك يا أبو السيد!</h1>
+            <p class="dashboard-welcome-text">مرحباً بك في لوحة تحكم AD الخاصة بك، هنا يمكنك متابعة كل جديد عن عملك.</p>
+
+            <section class="dashboard-stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-users"></i>
+                    <h3>العملاء الجدد</h3>
+                    <p>1,250</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <h3>إجمالي الأرباح</h3>
+                    <p>$85,000</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>المشاريع المكتملة</h3>
+                    <p>75</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-tasks"></i>
+                    <h3>المهام المعلقة</h3>
+                    <p>12</p>
+                </div>
+            </section>
+
+            <section class="recent-projects">
+                <h3>المشاريع الأخيرة</h3>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-paint-brush"></i>
+                            <h4>تصميم شعار "نيون ستريت"</h4>
+                        </div>
+                        <p>مشروع تصميم شعار جديد بستايل النيون لشركة ناشئة.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2025-07-28</span>
+                            <span><i class="fas fa-check-circle"></i> مكتمل</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-store"></i>
+                            <h4>واجهة متجر إلكتروني</h4>
+                        </div>
+                        <p>تصميم واجهة مستخدم (UI/UX) لمتجر ملابس عصري.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2025-07-25</span>
+                            <span><i class="fas fa-clock"></i> قيد التنفيذ</span>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-header">
+                            <i class="fas fa-image"></i>
+                            <h4>حملة إعلانية (سوشيال ميديا)</h4>
+                        </div>
+                        <p>تصميم صور وفيديوهات لحملة إعلانية على فيسبوك وإنستجرام.</p>
+                        <div class="project-meta">
+                            <span><i class="fas fa-calendar-alt"></i> 2025-07-20</span>
+                            <span><i class="fas fa-check-circle"></i> مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="recent-activity">
+                <h3>الأنشطة الأخيرة</h3>
+                <ul>
+                    <li>
+                        <span>تم تحديث مشروع "تصميم المتجر الإلكتروني".</span>
+                        <span class="date">منذ 5 دقائق</span>
+                    </li>
+                    <li>
+                        <span>تم إضافة عميل جديد: أحمد محمود.</span>
+                        <span class="date">منذ ساعة</span>
+                    </li>
+                    <li>
+                        <span>تم إرسال فاتورة رقم #1024.</span>
+                        <span class="date">منذ يوم</span>
+                    </li>
+                    <li>
+                        <span>تمت مراجعة تصميم شعار جديد.</span>
+                        <span class="date">منذ يومين</span>
+                    </li>
+                    <li>
+                        <span>تم عقد اجتماع مع العميل سارة علي.</span>
+                        <span class="date">منذ 3 أيام</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="notifications-section">
+                <h3>الإشعارات</h3>
+                <div class="notification-list">
+                    <div class="notification-item">
+                        <i class="fas fa-bell"></i>
+                        <p>لديك طلب تصميم جديد من **شركة الإبداع للبرمجيات**.</p>
+                        <span><i class="fas fa-clock"></i> الآن</span>
+                    </div>
+                    <div class="notification-item unread">
+                        <i class="fas fa-envelope"></i>
+                        <p>رسالة جديدة من **العميل محمد علي** بخصوص مشروع الشعار.</p>
+                        <span><i class="fas fa-clock"></i> منذ 30 دقيقة</span>
+                    </div>
+                    <div class="notification-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <p>اجتماعك مع **فريق التسويق** اليوم الساعة 3 مساءً.</p>
+                        <span><i class="fas fa-clock"></i> 2 ساعة مضت</span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div> </body>
+</html>
