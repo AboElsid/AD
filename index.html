@@ -6,8 +6,8 @@
     <title>AD Design & Dev - عالم الإبداع الرقمي</title>
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="dark-mode"> 
@@ -15,14 +15,14 @@
         <div id="interactive-grid"></div> 
 
         <div class="top-bar container">
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-auth glow-effect" id="loginButton">تسجيل الدخول</a>
+                <a href="#" class="btn btn-auth-secondary glow-effect" id="registerButton">إنشاء حساب</a>
+                <p class="fade-in-up delay-1">test@test.com | 123</p>
             </div>
+            </div> 
 
-        <div class="auth-buttons">
-            <a href="#" class="btn btn-auth glow-effect" id="showLogin">تسجيل الدخول</a>
-            <a href="#" class="btn btn-auth-secondary glow-effect" id="showRegister">إنشاء حساب</a>
-            <p class="fade-in-up delay-1">test@test.com | 123</p>
-        </div>
-        </div> <div class="hero-content">
+        <div class="hero-content">
             <h1 class="fade-in-up">مرحباً بك في عالم <span class="highlight">AD</span> الإبداعي</h1>
             <p class="fade-in-up delay-1">حيث يلتقي التصميم بالبرمجة واللمسة الفنية المستقبلية لابتكار تجارب مبهرة.</p>
             <div class="hero-buttons fade-in-up delay-2">
@@ -120,8 +120,6 @@
                         <a href="#" class="view-project-btn glow-effect">شاهد المشروع</a>
                     </div>
                 </div>
-
-                </div>
             </div>
         </div>
     </section>
@@ -146,51 +144,126 @@
     </footer>
 
     <div id="loginModal" class="modal">
-        <div class="modal-content auth-container transform-zoom-in">
-            <span class="close-button">&times;</span>
-            <h2 class="auth-title">تسجيل الدخول إلى AD</h2>
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="modal-email">البريد الإلكتروني:</label>
-                    <input type="email" id="modal-email" placeholder="بريدك الإلكتروني" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-password">كلمة المرور:</label>
-                    <input type="password" id="modal-password" placeholder="كلمة المرور" required>
-                </div>
-                <button type="submit" class="btn btn-primary-neon pulse-effect">تسجيل الدخول</button>
-                <p class="auth-switch">ليس لديك حساب؟ <a href="#" id="showRegisterFromLogin">سجل الآن</a></p>
-            </form>
+        <div class="modal-content">
+            <span class="close-button" id="closeButton">&times;</span>
+            <div class="auth-container">
+                <h2 class="auth-title">تسجيل الدخول</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="loginEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="loginEmail" placeholder="ادخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="loginPassword">كلمة المرور:</label>
+                        <input type="password" id="loginPassword" placeholder="ادخل كلمة المرور" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary-neon">دخول</button>
+                    <p class="auth-switch">ليس لديك حساب؟ <a href="#" id="switchToRegister">انشئ حساب الآن</a></p>
+                </form>
+            </div>
         </div>
     </div>
 
     <div id="registerModal" class="modal">
-        <div class="modal-content auth-container transform-zoom-in">
-            <span class="close-button">&times;</span>
-            <h2 class="auth-title">إنشاء حساب جديد</h2>
-            <form class="auth-form">
-                <div class="form-group">
-                    <label for="modal-fullname">الاسم الكامل:</label>
-                    <input type="text" id="modal-fullname" placeholder="اسمك بالكامل" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-reg-email">البريد الإلكتروني:</label>
-                    <input type="email" id="modal-reg-email" placeholder="بريدك الإلكتروني" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-reg-password">كلمة المرور:</label>
-                    <input type="password" id="modal-reg-password" placeholder="كلمة المرور" required>
-                </div>
-                <div class="form-group">
-                    <label for="modal-confirm-password">تأكيد كلمة المرور:</label>
-                    <input type="password" id="modal-confirm-password" placeholder="أعد إدخال كلمة المرور" required>
-                </div>
-                <button type="submit" class="btn btn-primary-neon pulse-effect">إنشاء الحساب</button>
-                <p class="auth-switch">لديك حساب بالفعل؟ <a href="#" id="showLoginFromRegister">سجل دخولك</a></p>
-            </form>
+        <div class="modal-content">
+            <span class="close-button" id="closeRegisterButton">&times;</span>
+            <div class="auth-container">
+                <h2 class="auth-title">انشئ حساب</h2>
+                <form class="auth-form">
+                    <div class="form-group">
+                        <label for="registerUsername">اسم المستخدم:</label>
+                        <input type="text" id="registerUsername" placeholder="ادخل اسم المستخدم" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerEmail">البريد الإلكتروني:</label>
+                        <input type="email" id="registerEmail" placeholder="ادخل بريدك الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="registerPassword">كلمة المرور:</label>
+                        <input type="password" id="registerPassword" placeholder="ادخل كلمة المرور" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="modal-confirm-password">تأكيد كلمة المرور:</label>
+                        <input type="password" id="modal-confirm-password" placeholder="أعد إدخال كلمة المرور" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary-neon">تسجيل</button>
+                    <p class="auth-switch">لديك حساب بالفعل؟ <a href="#" id="switchToLogin">سجل دخولك الآن</a></p>
+                </form>
+            </div>
         </div>
     </div>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const loginButton = document.getElementById('loginButton');
+            const registerButton = document.getElementById('registerButton'); 
+            const loginModal = document.getElementById('loginModal');
+            const registerModal = document.getElementById('registerModal');
+            const closeButton = document.getElementById('closeButton');
+            const closeRegisterButton = document.getElementById('closeRegisterButton');
+            const switchToRegisterLink = document.getElementById('switchToRegister');
+            const switchToLoginLink = document.getElementById('switchToLogin');
+
+            if (loginButton) {
+                loginButton.addEventListener('click', () => {
+                    loginModal.classList.add('show');
+
+                    if (registerModal.classList.contains('show')) {
+                        registerModal.classList.remove('show');
+                    }
+                });
+            }
+
+            if (registerButton) {
+                registerButton.addEventListener('click', () => {
+                    registerModal.classList.add('show');
+
+                    if (loginModal.classList.contains('show')) {
+                        loginModal.classList.remove('show');
+                    }
+                });
+            }
+
+            if (closeButton) {
+                closeButton.addEventListener('click', () => {
+                    loginModal.classList.remove('show');
+                });
+            }
+
+            if (closeRegisterButton) {
+                closeRegisterButton.addEventListener('click', () => {
+                    registerModal.classList.remove('show');
+                });
+            }
+
+
+            window.addEventListener('click', (event) => {
+                if (event.target == loginModal) {
+                    loginModal.classList.remove('show');
+                }
+                if (event.target == registerModal) {
+                    registerModal.classList.remove('show');
+                }
+            });
+
+
+            if (switchToRegisterLink) {
+                switchToRegisterLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    loginModal.classList.remove('show');
+                    registerModal.classList.add('show');
+                });
+            }
+
+            if (switchToLoginLink) {
+                switchToLoginLink.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    registerModal.classList.remove('show');
+                    loginModal.classList.add('show');
+                });
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
